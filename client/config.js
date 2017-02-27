@@ -7,11 +7,11 @@ console.log("Creating App");
 
 app.config(function ($routeProvider) {
     $routeProvider.when("/", {
-        templateUrl: "partials/items-index.html",
-        controller: "itemsIndex"
-    }).when("/new-item", {
-        templateUrl: "partials/new-item.html",
-        controller: "newItem"
+        templateUrl: "partials/visitor.html",
+        controller: "visitorController"
+    }).when("/home", {
+        templateUrl: "partials/home.html",
+        controller: "mainController"
     });
     console.log("Configuring Routes")
 });
