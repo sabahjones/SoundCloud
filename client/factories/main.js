@@ -9,10 +9,17 @@ app.factory("mainFactory", function () {
     var factory = {};
     var username = ""
 
+    factory.login = function(loginname){
+      console.log("factory login value received is ", loginname)
+      username = loginname
+    }
+    
     factory.getuser = function(callback){
       callback(username)
+      console.log("current factory username is ", username)
       return username
-    },
+    }
+
 
     return factory;
 
