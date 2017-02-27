@@ -4,4 +4,11 @@
 */
 app.controller("mainController", function (mainFactory, $scope) {
     console.log("Created main Index Controller");
-});
+
+    mainFactory.getuser(function(response){
+      $scope.username = response
+    })
+
+
+
+  });
