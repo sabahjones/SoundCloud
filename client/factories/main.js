@@ -7,6 +7,12 @@ app.factory("mainFactory", function () {
     console.log("Created main Factory");
 
     var factory = {};
+    var username = ""
+
+    factory.getuser = function(callback){
+      callback(username)
+      return username
+    },
 
     return factory;
 
