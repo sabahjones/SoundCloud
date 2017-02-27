@@ -13,5 +13,5 @@ app.config(function ($routeProvider) {
         templateUrl: "partials/home.html",
         controller: "mainController"
     });
-    console.log("Configuring Routes")
+    console.log("Configuring Routes");
 });
