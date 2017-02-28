@@ -13,5 +13,6 @@ app.controller("uploadController", function (mainFactory, $scope) {
     $scope.upload = function(){
       console.log($scope.song)
       console.log($scope.song.file)
+
     }
 })
