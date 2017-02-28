@@ -9,6 +9,4 @@ app.controller("mainController", function (mainFactory, $scope) {
       $scope.username = response
     })
 
-
-
   });

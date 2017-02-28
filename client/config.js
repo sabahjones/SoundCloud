@@ -12,6 +12,10 @@ app.config(function ($routeProvider) {
     }).when("/home", {
         templateUrl: "partials/home.html",
         controller: "mainController"
-    });
+    }).when("/upload", {
+        templateUrl: "partials/upload.html",
+        controller: "uploadController",
+    })
+    ;
     console.log("Configuring Routes");
 });

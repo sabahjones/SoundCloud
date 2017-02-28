@@ -1,0 +1,16 @@
+<h1>upload partial</h1>
+
+welcome {{username}},
+
+
+<h2>upload file</h2>
+
+<form>
+  <table>
+    <tr><td>artist: </td><td><input type="text" ng-model="song.artist"></td></tr>
+    <tr><td>song: </td><td><input type="text" ng-model="song.name"></td></tr>
+    <tr><td>album: </td><td><input type="text" ng-model="song.album"></td></tr>
+  </table>
+    <input type="file" ng-model="song.file"><br>
+    <input type="submit" value ="upload" ng-click="upload()">
+</form>
