@@ -40,3 +40,14 @@
 .ul.header__navMenu.header__mainMenu.left.sc-list-nostyle{
     display: inline;
 }
+
+.sub-nav ul li a{
+    display:inline;
+}
+h2 {
+    display: inline;
+}
+
+ul li{
+    display:inline;
+}

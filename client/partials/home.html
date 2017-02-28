@@ -2,65 +2,70 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
-        <link rel="stylesheet" href="/public/css/home-styles.css" />
+        <title>Home</title>
         <link rel="stylesheet" href="https://bootswatch.com/cosmo/bootstrap.min.css" />
+        <link rel="stylesheet" href="/public/css/home-styles.css" />
         <link rel="stylesheet" href="https://style.sndcdn.com/css/interstate-0ab59479718c8235122cad6b16a66953d725c43a.css"/>
         <link rel="stylesheet" href="https://a-v2.sndcd/" />
+        <style>
+            body{
+                height:auto;
+                width:960px;
+            }
+            navbar-fixed-top ul{display:inline;}
+            navbar-fixed-top ul li {display:inline-block;}
+            navbar-fixed-top {
+                /*border:solid 2px black;*/
+                padding:20px;
+                margin-top:20px;
+                width: auto;
+            }
+            .sub-nav{display:inline-block;}
+            .right-nav {
+                display:inline-block;
+                border: 1px solid darkgray;
 
+            }
+            .left-nav{
+                display:inline-block;
+                border: 1px dashed black;
+            }
+            .button-org{background: rgba(255,72,0,.8);}
+        </style>
     </head>
-    <body data-gr-c-s-loaded="true" class="" cz-shortcut-listen="true" style="padding-right: 0px;">
-  <div id="app" class=""><header role="banner" class="header sc-selection-disabled fixed g-dark g-z-index-header show"><div class="header__inner l-container l-fullwidth">
+    <body>
+        <div class="page-header">
+        <navbar-fixed-top>
+            <div class="header__logo left"><a href="/" title="Home" class="header__logoLink sc-border-box sc-ir"></a></div>
+            <ul>
+                <li><a>Home</a></li>
+                <li><a>Collection</a></li>
+            </ul>
+            <input type="search" placeholder="search" />
+            <ul>
+                <li><a>Upgrade</a></li>
+                <li><a>Upload</a></li>
+            </ul>
+        </navbar-fixed-top>
+        </div>
+        <div class="sub-nav">
+            <div class="left-nav">
+                <ul>
+                    <li><h2><b><a><u>Stream </u></a></li>
+                    <li><h2><b><a><u>Charts </u></a></b></h2></li>
+                    <li><h2><b><a><u>Discover</u></a></b></h2></li>
 
-  <div class="header__left">
-    <div class="header__logo left">
-      <a href="/" title="Home" class="header__logoLink sc-border-box sc-ir"></a>
-    </div>
-    <nav class="left header__navWrapper" role="navigation">
-      <ul class="header__navMenu header__mainMenu left sc-list-nostyle">
-          <li>
-            <a class="header__mainMenu-loggedInHome header__mainMenu-stream selected" href="/stream">Home</a>
-          </li>
-          <li class="header__collection-wrapper"><a class="header__mainMenu-collection" href="/you/collection">Collection</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div class="header__middle">
-    <div class="header__search" role="search">
-      <form class="headerSearch"><input class="headerSearch__input sc-input g-all-transitions-300" placeholder="Search" type="search" name="q" autocomplete="off" aria-label="Search" aria-autocomplete="list" aria-owns="searchMenuList">
-<button class="headerSearch__submit submit sc-ir" type="submit">Search</button>
-</form>
-    </div>
-  </div>
-  <div class="header__right sc-clearfix">
-        <a class="header__link header__goUpsell" href="/go">Upgrade</a>
-            <div class="header__soundInput left">
-        <a class="uploadButton header__link" tabindex="0" href="/upload"><span class="uploadButton__title">Upload</span><span class="uploadButton__status"></span></a>
-      </div>
+                </ul>
+                <h3>Hear the latest posts form the people you are following</h3>
+            </div>
+            <!-- <hr /> -->
+            <div class="right-nav">
+                <h5>Like tracks to save them</h5>
+                <h6>Liking tracks also helps you discover similar artists</h6>
+                <button class="button-org">Learn More</button>
+            </div>
 
-  </div>
-</div>
-</header>
+        </div>
 
-
-
-<!-- </article><article class="sidebarModule g-all-transitions-200-linear mobileApps">    <div class="sidebarHeader sc-clearfix sc-type-light sc-border-light-bottom">
-    <h3 class="sidebarHeader__title sc-type-light sc-font-tabular noIcon">
-      <span class="sidebarHeader__actualTitle">Go mobile</span>
-    </h3>
-    <span class="sidebarHeader__more sc-type-h3 mobileApps__dismiss sc-ir">Dismiss</span>
-    </div>
-  <div class="sidebarContent"><div class="mobileAppsButtons sc-clearfix m-sidebar"><a href="https://itunes.apple.com/us/app/soundcloud/id336353151?mt=8" target="_blank" class="mobileAppsButtons__button mobileAppsButtons__appStore g-appStoreButton g-appStoreButton__appStore sc-ir">
-  Download on the App Store
-</a> -->
-<!-- <a href="https://play.google.com/store/apps/details?id=com.soundcloud.android&amp;referrer=utm_source%3Dsoundcloud%26utm_medium%3Dweb%26utm_campaign%3Dweb_xsell_stream_page" target="_blank" class="mobileAppsButtons__button mobileAppsButtons__googlePlay g-appStoreButton g-appStoreButton__googlePlay sc-ir">
-  Get it on Google Play
-</a> -->
-
-
-
-
-
-
-</body>
+    </body>
 </html>
