@@ -5,12 +5,12 @@ welcome {{username}},
 
 <h2>upload file</h2>
 
-<form>
+<form enctype='multipart/form-data' action="/upload" method='POST'>
   <table>
-    <tr><td>artist: </td><td><input type="text" ng-model="song.artist"></td></tr>
-    <tr><td>song: </td><td><input type="text" ng-model="song.name"></td></tr>
-    <tr><td>album: </td><td><input type="text" ng-model="song.album"></td></tr>
+    <tr><td>artist: </td><td><input type="text" name="artist"></td></tr>
+    <tr><td>song: </td><td><input type="text" name="song"></td></tr>
+    <tr><td>album: </td><td><input type="text" name="album"></td></tr>
   </table>
-    <input type="file" ng-model="song.file"><br>
-    <input type="submit" value ="upload" ng-click="upload()">
+    <input type="file" name="songfile"><br>
+    <input type="submit" value ="upload">
 </form>

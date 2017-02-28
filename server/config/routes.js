@@ -4,11 +4,13 @@
 */
 console.log("Loaded /server/config/routes.js");
 
-var ItemsController = require("../controllers/items");
+var SoundcloudController = require("../controllers/soundcloudController");
+var multer = require('multer')
+var upload = multer({dest: 'uploads/'})
 
 module.exports = function (app) {
 
-    app.get("/items", ItemsController.index)  // Controller get items
-    app.post("/items", ItemsController.create)  // Controller create items
+    app.get("/items",  SoundcloudController.index)  // Controller get items
+    app.post("/upload", upload.single('songfile'), SoundcloudController.create)  // Controller create items
 
 };
