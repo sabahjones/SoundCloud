@@ -79,7 +79,37 @@
   <p class="text-center">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
   <p class="text-center"><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
 </div>
+
+
+<form>
+  <table>
+    <tr><td>artist: </td><td><input type="text" ng-model="song.artist"></td></tr>
+    <tr><td>song name: </td><td><input type="text" ng-model="song.title"></td></tr>
+  </table>
+    <button ngf-accept="mp3" ngf-select ng-model="file" name='file'>
+      select
+    </button>   <i>{{file.name}}</i>
+    <br>
+    <input type="submit" value ="upload" ng-click='uploadsong(file)'>
+
+</form>
+welcome {{username}},
+<h3>All songs</h3>
+
+<p ng-repeat='song in songs'>
+{{song.title}} <audio controls> <source src="{{song.filename}}" type="audio/mpeg"></audio>
+</p>
+
+<br><br><br>
+
+<h4>{{songs}}</h4>
+
 <!-- <div class="upload container-fluid">
     <div class="row">
         <section class="col-md-12">
-            <h2>upload file</h2>
+            <h2>upload file</h2> -->
+
+
+
+</body>
+</html>

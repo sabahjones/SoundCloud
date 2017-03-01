@@ -4,21 +4,21 @@
 */
 console.log("Loaded: /server/controllers/soundcloudController.js");
 
-var mongoose = require('mongoose')
-var Song = mongoose.model('Song')
+var mongoose = require('mongoose');
+var Song = mongoose.model('Song');
 
 module.exports = {
 
     getsongs: function (request, response) {
         Song.find({}, function(err, results){
           if (err){
-            console.log("unable to get songs from db")
+            console.log("unable to get songs from db");
           }
           else {
-            console.log("successfully retrieved songs")
-            response.json(results)
+            console.log("successfully retrieved songs");
+            response.json(results);
           }
-        })
+      });
     },
 
     save: function (request, response) {
@@ -28,15 +28,15 @@ module.exports = {
           likes: 0,
           filepath: request.file.path,
           filename: request.file.filename,
-        })
+      });
         newsong.save(function(err){
           if(err){
-            console.log("did not save song")
+            console.log("did not save song");
           }
           else {
-            console.log("successfully saved song to db")
-            response.json(newsong)
+            console.log("successfully saved song to db");
+            response.json(newsong);
           }
-        })
+      });
       }
-    }
+  };
