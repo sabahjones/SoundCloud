@@ -1,0 +1,38 @@
+body{
+    height:auto;
+    /*width: 1260px;*/
+}
+.bgimage{
+    background-image: url('../images/visitor.png');
+    background-position: center;
+    background-size: auto;
+    height: 454px;
+    width: 1260px;
+}
+
+.jumbotron{
+    background-image: url('https://a-v2.sndcdn.com/assets/images/home/hp_image-5ab805.jpg');
+    color: white;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.btn.btn-primary.btn-lg{
+    background: rgba(255,72,0,.8);
+}
+/*gets rid of thumbnail background*/
+.thumbnail {
+    border: 0 none;
+    box-shadow: none;
+}
+
+.btn{
+    border: 0 none;
+    box-shadow: none;
+}
+
+.img-thumbnail{
+    width:	724;
+    height:390;
+}

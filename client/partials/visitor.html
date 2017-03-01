@@ -1,45 +1,121 @@
-<!--
-    /client/partials/items-index.html
-    View / Template for showing all items
--->
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Visitor</title>
-        <link rel="stylesheet" href="/public/css/visitor-styles.css" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../public/css/styles2.css">
+        <title>BootStrap</title>
         <style>
-            .fontHero{background-image: url(https://a-v2.sndcdn.com/assets/images/header/cloud-e365a4.png);}
+            .header__logo{background-image: url('https://a-v2.sndcdn.com/assets/images/header/cloud-e365a4.png')}
         </style>
-        <!-- <script src="https://a-v2.sndcdn.com/assets/vendor-22014-b71feaf.js"></script>
-        <script src="https://a-v2.sndcdn.com/assets/views-al-f6825-b3182a1.js"></script>
-        <script src="https://a-v2.sndcdn.com/assets/views-93813-2388a31.js"></script> -->
     </head>
     <body>
+        <div class="jumbotron">
+            <div class="navbar-fixed-top">
+                <div class="header__logo left"><a href="/" title="Home" class="header__logoLink sc-border-box sc-ir"></a></div>
+                <div class= "nav navbar-nav navbar-right">
+                    <input type="text" ng-model="username">
+                    <input type="submit" value="sign in" ng-click=login()>
+                    <br /><br />
+                </div>
+                <!-- <a href="/" title="Home" class="header__logoLink sc-border-box sc-ir"></a> -->
 
+            </div>
+
+
+            <h2 class="text-center">Discover more with SoundCloud Go+</h2>
+            <h3 class="text-center">SoundCloud Go+ lets you listen offline, ad-free, with over 150 million tracks - and growing.</h3>
+          <!-- <p class="text-center">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p> -->
+          <p class="text-center"><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> <a class="btn btn-primary btn-lg" href="#" role="button">Try it Free for 30 days</a></p>
+
+            <!-- </header> -->
+        </div>
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="text-center">
+                    <form class="navbar-form" role="search">
+
+					<div class="input-group input-group-md">
+                        
+                        <input type="text" class="form-control" placeholder="Search for artists, bands, tracks, podcasts">
+    					<span class="input-group-btn">
+    						<button type="submit" class="btn btn-default">
+    							<span class="glyphicon glyphicon-search">
+    					           <span class="sr-only">Search</span>
+    							</span>
+    						</button>
+
+    					</span>
+
+					</div>
+                    Or
+                    <button class="btn btn-default" type="submit">Upload your own</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="text-center">
+                    <h3>Hear what's trending for free in the SoundCloud community</h3>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-xs-2"><a href="#" class="thumbnail"><img src="https://i1.sndcdn.com/artworks-k9MqYAGvEQFD-0-t200x200.jpg" /><div class="caption">Tunnel Vision<br />Kodak Black</div></a></div>
+                <div class="col-xs-2"><a href="#" class="thumbnail"><img src="https://i1.sndcdn.com/artworks-000179057945-14v79p-t200x200.jpg" /><div class="caption">Bad and Boujee (Feat. Lil U.. <br />Migos</div></a></div>
+                <div class="col-xs-2"><a href="#" class="thumbnail"><img src="https://i1.sndcdn.com/artworks-000141347538-tibbso-t200x200.jpg" /><div class="caption">XXXTENTACION - Look At ... <br /> ROJAS </div></a></div>
+                <div class="col-xs-2"><a href="#" class="thumbnail"><img src="https://i1.sndcdn.com/artworks-000196529492-77zopd-t200x200.jpg" /><div class="caption">iSpy feat. Lil Yachty<br /> KYLE. </div></a></div>
+                <div class="col-xs-2"><a href="#" class="thumbnail"><img src="https://i1.sndcdn.com/artworks-I9gMwpAhtlSJ-0-t200x200.jpg" /></a><div class="caption">Congratulations <br /> Post Malone </div></div>
+                <div class="col-xs-2"><a href="#" class="thumbnail"><img src="https://i1.sndcdn.com/artworks-000202834509-yoc5gi-t200x200.jpg" /><div class="caption">T-SHIRT <br />Migos</div></a></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2"><a href="#" class="thumbnail"><img src="https://i1.sndcdn.com/artworks-000198690204-yyos7l-t200x200.jpg" /><div class="caption">Gucci Mane - Both (Ft. Dra... <br />Trap God </div></a></div>
+                <div class="col-xs-2"><a href="#" class="thumbnail"><img src="https://i1.sndcdn.com/artworks-000202834509-yoc5gi-t200x200.jpg" /><div class="caption">SLIPPERY feat Gucci Mane <br /> Migos </div></a></div>
+                <div class="col-xs-2"><a href="#" class="thumbnail"><img src="https://i1.sndcdn.com/artworks-SbcZWMe12Pth-0-t200x200.jpg" /><div class="caption">Bounce Back <br />Big Sean </div></a></div>
+                <div class="col-xs-2"><a href="#" class="thumbnail"><img src="https://i1.sndcdn.com/artworks-000197895706-69eue3-t200x200.jpg" /><div class="caption">Kodak Black - There He Go<br />WorldStars Sound</div></a></div>
+                <div class="col-xs-2"><a href="#" class="thumbnail"><img src="https://i1.sndcdn.com/artworks-000209741436-qfq484-t200x200.jpg" /><div class="caption">1.5- XO TOUR Llif3 (Produc...<br />LIL UZI VERT</div></a></div>
+                <div class="col-xs-2"><a href="#" class="thumbnail"><img src="https://i1.sndcdn.com/artworks-000202954495-bvj05z-t200x200.jpg" /><div class="caption">Ayo & Teo - Rolex | #rolexc<br />ChrisOBosch</div></a></div>
+            </div>
+            <div class="row">
+                <div class="text-center">
+                    <button class="btn btn-primary btn-lg" type="submit">Explore our top50</button>
+                </div>
+            </div>
+            <br />
+            <br />
+
+            <div class="row">
+                <div class="col-xs-6">
+                    Never Stop Listening
+                    SoundCloud is available on Web, Mobile and with Sonos.
+                    <div class="sidebarContent"><div class="mobileAppsButtons sc-clearfix m-sidebar"><a href="https://itunes.apple.com/us/app/soundcloud/id336353151?mt=8" target="_blank" class="mobileAppsButtons__button mobileAppsButtons__appStore g-appStoreButton g-appStoreButton__appStore sc-ir">
+                    Download on the App Store
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=com.soundcloud.android&amp;referrer=utm_source%3Dsoundcloud%26utm_medium%3Dweb%26utm_campaign%3Dweb_xsell_stream_page" target="_blank" class="mobileAppsButtons__button mobileAppsButtons__googlePlay g-appStoreButton g-appStoreButton__googlePlay sc-ir">
+                    Get it on Google Play
+                  </a>
+                  </div></div>
+
+                </div>
+                <div class="col-xs-6">
+                    <img src="https://a-v2.sndcdn.com/assets/images/front/never_stop_listening@1x-ec4221.jpg" />
+                </div>
+            </div>
+        </div>
+
+
+
+        <footer>
+            <!-- FOOTER SECTION - Before closing </body> tag -->
+            <!-- jQuery -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+            <!-- Minified JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        </footer>
     </body>
 </html>
-<div class="frontHero"><h1 class="frontHero__logo">SoundCloud ::after ==$0 </h1><br /><br /><br />
-
-<div class="frontHero__content">
-  <h1 class="frontHero__title">Discover more with SoundCloud Go+</h1>
-  <p class="frontHero__tagline sc-type-large">
-    SoundCloud Go+ lets you listen offline, ad-free, with over 150 million tracks — and growing.
-  </p>
-  <div class="frontHero__cta">
-    <a class="consumerSubscriptionsButton frontHero__learnButton g-button-transparent-inverted sc-button sc-button-large sc-button-responsive" tabindex="0" href="/go" title="">Learn more</a>
-      <button class="consumerSubscriptionsCheckoutButton frontHero__ctaButton sc-button-cta sc-button sc-button-large sc-button-responsive" tabindex="0" title="">Try it free for 30 days</button>
-  </div>
-</div>
-
-<div class="frontHero__signin">
-  <button class="g-opacity-transition frontHero__loginButton g-button-transparent-inverted sc-button sc-button-medium loginButton" tabindex="0" title="Sign in">Sign in</button>
-  <button class="g-opacity-transition frontHero__createAccountButton sc-button sc-button-medium signupButton sc-button-cta" tabindex="0" title="Create a SoundCloud account">Create account</button>
-</div>
-</div>
-
-
-<br><br><br>
-
-<input type="text" ng-model="username">
-<input type="submit" value="sign in" ng-click=login()>
