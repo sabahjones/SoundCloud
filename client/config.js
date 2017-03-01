@@ -2,7 +2,7 @@
     /client/config.js
     Configure client routes, and really anything
 */
-var app = angular.module("itemsApp", ["ngRoute"]);
+var app = angular.module('app', ['ngRoute', 'ngFileUpload']);
 console.log("Creating App");
 
 app.config(function ($routeProvider) {

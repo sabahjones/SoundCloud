@@ -5,12 +5,31 @@ welcome {{username}},
 
 <h2>upload file</h2>
 
-<form enctype='multipart/form-data' action="/upload" method='POST'>
+<form>
+  <table>
+    <tr><td>artist: </td><td><input type="text" ng-model="song.artist"></td></tr>
+    <tr><td>song name: </td><td><input type="text" ng-model="song.title"></td></tr>
+  </table>
+    <button ngf-accept="mp3" ngf-select ng-model="file" name='file'>
+      select
+    </button>   <i>{{file.name}}</i>
+    <br>
+    <input type="submit" value ="upload" ng-click='uploadsong(file)'>
+
+</form>
+
+<h3>{{songs}}</h3>
+
+<!-- ngf-select="uploadsong($file, $invalidFiles)" this is going to-->
+
+
+<!-- <form enctype='multipart/form-data' action="/upload" method='POST'>
   <table>
     <tr><td>artist: </td><td><input type="text" name="artist"></td></tr>
-    <tr><td>song: </td><td><input type="text" name="song"></td></tr>
+    <tr><td>song name: </td><td><input type="text" name="songname"></td></tr>
     <tr><td>album: </td><td><input type="text" name="album"></td></tr>
   </table>
     <input type="file" name="songfile"><br>
     <input type="submit" value ="upload">
 </form>
+ -->
