@@ -4,17 +4,39 @@
 */
 console.log("Loaded: /server/controllers/soundcloudController.js");
 
-module.exports = {
-    index: function (request, response) {
-        console.log("Items Index");
-    },
-    create: function (request, response) {
-        request.file.filename = request.body.song
-        console.log(request.body)
-        console.log(request.file)
+var mongoose = require('mongoose')
+var Song = mongoose.model('Song')
 
-      // artists = request.body.artist.split(",");
-      // for (i in artists){
-      //   artists[i] = artists[i].trim();
+module.exports = {
+
+    getsongs: function (request, response) {
+        Song.find({}, function(err, results){
+          if (err){
+            console.log("unable to get songs from db")
+          }
+          else {
+            console.log("successfully retrieved songs")
+            response.json(results)
+          }
+        })
+    },
+
+    save: function (request, response) {
+        var newsong = new Song({
+          title: request.body.info.title,
+          artist: request.body.info.artist,
+          likes: 0,
+          filepath: request.file.path,
+          filename: request.file.filename,
+        })
+        newsong.save(function(err){
+          if(err){
+            console.log("did not save song")
+          }
+          else {
+            console.log("successfully saved song to db")
+            response.json(newsong)
+          }
+        })
       }
     }

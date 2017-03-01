@@ -10,7 +10,6 @@ var upload = multer({dest: 'uploads/'})
 
 module.exports = function (app) {
 
-    app.get("/items",  SoundcloudController.index)  // Controller get items
-    app.post("/upload", upload.single('songfile'), SoundcloudController.create)  // Controller create items
-
+    app.get("/songs",  SoundcloudController.getsongs)
+    app.post("/upload", upload.single('file'), SoundcloudController.save)
 };

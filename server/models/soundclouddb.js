@@ -6,7 +6,6 @@ console.log("Loaded: /server/models/soundcloud.js");
 
 var mongoose = require("mongoose");
 
-
 var CommentSchema = mongoose.Schema({
     text: String,
     _user: {type: mongoose.Schema.Types.ObjectId, ref:"User"}
@@ -15,22 +14,25 @@ var CommentSchema = mongoose.Schema({
 var UserSchema = mongoose.Schema({
     name: String,
     email: String,
+    password: String
 });
 
 var SongSchema = mongoose.Schema({
     title: String,
-    _artist: {type: mongoose.Schema.Types.ObjectId, ref:"User"},
-    album: String,
+    artist: String,
     likes: Number,
     comments: [{type: mongoose.Schema.Types.ObjectId, ref:"Comment"}],
-    filepath: String
+    filepath: String,
+    filename: String
 });
 
-var AlbumSchema = mongoose.Schema({
+var PlaylistSchema = mongoose.Schema({
   title: String,
   songs: [{type: mongoose.Schema.Types.ObjectId, ref:"Song"}],
-  _artist: {type: mongoose.Schema.Types.ObjectId, ref:"User"}
+  _user: {type: mongoose.Schema.Types.ObjectId, ref:"User"}
 });
 
-module.exports = mongoose.model("Song", SongSchema);
-module.exports = mongoose.model("User", UserSchema);
+mongoose.model("Song", SongSchema);
+mongoose.model("User", UserSchema);
+mongoose.model("Playlist", PlaylistSchema);
+mongoose.model("Comment", CommentSchema);
