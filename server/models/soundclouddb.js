@@ -22,7 +22,8 @@ var SongSchema = mongoose.Schema({
     artist: String,
     likes: Number,
     comments: [{type: mongoose.Schema.Types.ObjectId, ref:"Comment"}],
-    filepath: String
+    filepath: String,
+    filename: String
 });
 
 var PlaylistSchema = mongoose.Schema({

@@ -15,7 +15,7 @@ app.config(function ($routeProvider) {
     }).when("/upload", {
         templateUrl: "partials/upload.html",
         controller: "uploadController",
-    })
+    }).otherwise("/")
     ;
     console.log("Configuring Routes");
 });

@@ -26,7 +26,9 @@ module.exports = {
           title: request.body.info.title,
           artist: request.body.info.artist,
           likes: 0,
-          filepath: request.file.path })
+          filepath: request.file.path,
+          filename: request.file.filename,
+        })
         newsong.save(function(err){
           if(err){
             console.log("did not save song")

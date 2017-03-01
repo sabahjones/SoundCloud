@@ -18,7 +18,15 @@ welcome {{username}},
 
 </form>
 
-<h3>{{songs}}</h3>
+<h3>All songs</h3>
+
+<p ng-repeat='song in songs'>
+{{song.title}} <audio controls> <source src="{{song.filename}}" type="audio/mpeg"></audio>
+</p>
+
+<br><br><br>
+
+<h4>{{songs}}</h4>
 
 <!-- ngf-select="uploadsong($file, $invalidFiles)" this is going to-->
 

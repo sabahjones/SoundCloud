@@ -14,9 +14,8 @@ app.controller("uploadController", function (mainFactory, $scope, Upload) {
 //get songs
 
     mainFactory.getsongs(function(response){
-      $scope.songs = response   
+      $scope.songs = response
     })
-
 
     $scope.uploadsong = function(file){
       info = $scope.song
@@ -30,6 +29,5 @@ app.controller("uploadController", function (mainFactory, $scope, Upload) {
       //mainFactory.upload($scope.song)
       console.log($scope.song)
       }
-
 
 }) //end controller
